@@ -1,12 +1,15 @@
+import { Route, Router, Routes } from "react-router-dom";
+import Overview from "./Overview";
+import Edit from "./Edit";
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={ Overview }></Route>
+        <Route exact path="/edit" element={ Edit }></Route>
+      </Routes>
+    </Router>
   );
 }
 
